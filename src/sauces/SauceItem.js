@@ -9,7 +9,7 @@ class SauceItem extends Component {
     return (
       <li className='SauceItem'>
         <h2>{sauce.name}</h2>
-        <img src={sauce.url} alt='Hot Sauce'/>
+        <img src={sauce.img} alt='Hot Sauce'/>
         <p className='scoville'>Scoville: {sauce.scoville}</p>
         <p className='location'>{sauce.location}</p>
       </li>

@@ -1,4 +1,4 @@
-li {
+li a {
     display: grid;
     grid-template-rows: 50px 1fr;
     border: 1px solid red;
@@ -9,7 +9,8 @@ li {
     justify-content: center;
     background: lightcoral;
     max-width: 200px;
-    /* list-style: none; */
+    text-decoration: none;
+    color: black;
 }
 
 li h2 {

@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import SaucePage from '../sauces/SaucePage.js';
+import SauceDetail from '../sauce/SauceDetail.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,6 +11,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+
 
 class App extends Component {
 
@@ -35,7 +37,7 @@ class App extends Component {
 
               <Route path="/sauces/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <SauceDetail {...routerProps}/>
                 )}
               />
 

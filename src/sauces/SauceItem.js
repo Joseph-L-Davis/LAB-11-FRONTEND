@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './SauceItem.css';
 
 class SauceItem extends Component {
@@ -8,10 +9,15 @@ class SauceItem extends Component {
 
     return (
       <li className='SauceItem'>
-        <h2>{sauce.name}</h2>
-        <img src={sauce.img} alt='Hot Sauce'/>
-        <p className='scoville'>Scoville: {sauce.scoville}</p>
-        <p className='location'>{sauce.location}</p>
+        <Link to={`/sauces/${sauce.id}`}>
+
+          <h2>{sauce.name}</h2>
+          <img src={sauce.img} alt='Hot Sauce'/>
+          <p className='scoville'>Scoville: {sauce.scoville}</p>
+          <p className='location'>{sauce.location}</p>
+      
+        </Link>
+        
       </li>
 
     );

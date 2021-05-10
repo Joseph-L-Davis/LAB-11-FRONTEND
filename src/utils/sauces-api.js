@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'http://localhost:8001/api/sauces';
+const URL = '/api/sauces';
 
 export async function getSauces() {
   const response = await request.get(URL);

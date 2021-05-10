@@ -1,9 +1,19 @@
 .Header {
   padding: 20px;
+  display: grid;
   border-bottom: 1px solid lightgray;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
 }
 
 h1 {
   font-size: 2rem;
+  display: grid;
+  justify-content: center;
   font-weight: bold;
+  width: 60vw;
+  color: lightcoral;
+  box-shadow: 2px 2px 10px 2px;
+ 
 }

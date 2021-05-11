@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import SaucePage from '../sauces/SaucePage.js';
-import SauceDetail from '../sauce/banana.js'; 
+import SauceDetail from '../sauce/SauceDetail.js'; 
 import {
   BrowserRouter as Router,
   Route,

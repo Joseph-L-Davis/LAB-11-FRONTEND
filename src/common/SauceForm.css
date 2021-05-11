@@ -1,3 +1,16 @@
 .SauceForm {
-  
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+}
+
+.SauceForm p {
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.SauceForm input {
+    margin-left: 5px;
+    width: 200px;
 }

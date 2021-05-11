@@ -11,6 +11,7 @@ class Header extends Component {
         <h1>Hot Sauce App</h1>
         
         <Link to='/'>Home Page</Link>
+        <Link to='/sauces/add'>Add Your Favorite Hot Sauce</Link>
         
       </header>
     );

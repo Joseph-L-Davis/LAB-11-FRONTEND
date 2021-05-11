@@ -36,10 +36,10 @@ class App extends Component {
                 )}
               />
 
-              <Route path='/sauce/add' exact={true}
-                render={routerProps => {
-                  <SauceAdd {...routerProps}/>;
-                }}
+              <Route path='/sauces/add' exact={true}
+                render={routerProps => (
+                  <SauceAdd {...routerProps}/>
+                )}
               />
 
               <Route path="/sauces/:id"

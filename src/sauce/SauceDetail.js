@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './SauceDetail.css';
 import { getSauce } from '../utils/sauces-api.js';
 
@@ -17,6 +18,13 @@ export default class SauceDetail extends Component {
     }
   }
 
+  handleDelete = () => {
+    const { sauce } = this.state;
+    const confirm = `Delete ${sauce.name}?`;
+
+    if (!window.confirm(confirm)) { return; }
+  }
+
   render() {
     const { sauce } = this.state;
 
@@ -28,6 +36,8 @@ export default class SauceDetail extends Component {
         <img src={sauce.img} alt='Hot Sauce'/>
         <p className='scoville'>Scoville: {sauce.scoville}</p>
         <p className='location'>{sauce.location}</p>
+
+        <button className='delete' onClick={this.handleDelete}>Delete Sauce</button>
                 
       </div>
     );

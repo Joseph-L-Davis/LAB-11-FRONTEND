@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import SaucePage from '../sauces/SaucePage.js';
 import SauceDetail from '../sauce/SauceDetail.js'; 
+import SauceAdd from '../sauceAdd/SauceAdd.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -33,6 +34,12 @@ class App extends Component {
                 render={routerProps => (
                   <SaucePage {... routerProps}/>
                 )}
+              />
+
+              <Route path='/sauce/add' exact={true}
+                render={routerProps => {
+                  <SauceAdd {...routerProps}/>;
+                }}
               />
 
               <Route path="/sauces/:id"

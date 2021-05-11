@@ -3,10 +3,10 @@ import './SauceForm.css';
 
 export default class SauceForm extends Component {
     state = {
-      name: '',
-      scoville: '',
-      location: '',
-      img: ''
+      name: 'Truff',
+      scoville: '50,000',
+      location: 'Alabama',
+      img: 'https://images-na.ssl-images-amazon.com/images/I/616ax8l1-EL._SL1350_.jpg'
     }
   
     componentDidMount() {
@@ -44,21 +44,21 @@ export default class SauceForm extends Component {
           <p>
             <label>
               <span>Sauce Name</span>
-              <input name="name" placeholder="Enter Name of Sauce" value={name} onChange={this.handleChangeName}/>
+              <input name="name" required placeholder="Enter Name of Sauce" value={name} onChange={this.handleChangeName}/>
             </label>
           </p>
 
           <p>
             <label>
               <span>Scoville</span>
-              <input name="scoville" placeholder="Enter Scoville Info" value={scoville} onChange={this.handleChangeScoville}/>
+              <input name="scoville" required placeholder="Enter Scoville Info" value={scoville} onChange={this.handleChangeScoville}/>
             </label>
           </p>
 
           <p>
             <label>
               <span>Location</span>
-              <input name="location" placeholder="Where Is This Sauce Made?" value={location} onChange={this.handleChangeLocation}/>
+              <input name="location" required placeholder="Where Is This Sauce Made?" value={location} onChange={this.handleChangeLocation}/>
             </label>
           </p>
 

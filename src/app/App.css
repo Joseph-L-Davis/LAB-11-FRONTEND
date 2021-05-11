@@ -6,5 +6,8 @@
 
 main {
   background: #FAF0EA;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
 }
 

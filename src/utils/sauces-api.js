@@ -13,6 +13,6 @@ export async function getSauce(id) {
 }
 
 export async function addSauce(sauce) {
-  const response = await (await request.post(URL)).send(sauce);
+  const response = await await request.post(URL).send(sauce);
   return response.body;
 }

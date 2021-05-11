@@ -3,10 +3,10 @@ import './SauceForm.css';
 
 export default class SauceForm extends Component {
     state = {
-      name: 'Truff',
-      scoville: '50,000',
-      location: 'Alabama',
-      img: 'https://images-na.ssl-images-amazon.com/images/I/616ax8l1-EL._SL1350_.jpg'
+      name: '',
+      scoville: '',
+      location: '',
+      img: ''
     }
   
     componentDidMount() {

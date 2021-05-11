@@ -12,6 +12,11 @@ export async function getSauce(id) {
   return response.body;
 }
 
+export async function deleteSauce(id) {
+  const response = await request.delete(`${URL}/${id}`);
+  return response.body;
+}
+
 export async function addSauce(sauce) {
   const response = await await request.post(URL).send(sauce);
   return response.body;

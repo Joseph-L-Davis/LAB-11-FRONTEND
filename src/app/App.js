@@ -5,6 +5,7 @@ import Home from '../home/Home';
 import SaucePage from '../sauces/SaucePage.js';
 import SauceDetail from '../sauce/SauceDetail.js'; 
 import SauceAdd from '../sauceAdd/SauceAdd.js';
+import SauceEdit from '../sauceEdit/SauceEdit.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,6 +13,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+
 
 
 class App extends Component {
@@ -42,9 +44,15 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/sauces/:id"
+              <Route path="/sauces/:id" exact={true}
                 render={routerProps => (
                   <SauceDetail {...routerProps}/>
+                )}
+              />
+
+              <Route path="/sauces/:id/edit" exact={true}
+                render={routerProps => (
+                  <SauceEdit {...routerProps}/>
                 )}
               />
 

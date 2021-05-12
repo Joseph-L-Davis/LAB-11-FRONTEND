@@ -45,11 +45,11 @@ export default class SauceDetail extends Component {
         <p className='scoville'>Scoville: {sauce.scoville}</p>
         <p className='location'>{sauce.location}</p>
 
+        <Link to={`/sauces/${sauce.id}/edit`}>Edit Sauce</Link>
+
         <button className='delete' onClick={this.handleDelete}>Delete Sauce</button>
                 
       </div>
     );
   }
 }
-
-// banana

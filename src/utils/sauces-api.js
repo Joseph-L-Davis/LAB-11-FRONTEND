@@ -21,3 +21,8 @@ export async function addSauce(sauce) {
   const response = await await request.post(URL).send(sauce);
   return response.body;
 }
+
+export async function updateSauce(sauce) {
+  const response = await await request.put(`${URL}/${sauce.id}`).send(sauce);
+  return response.body;
+}

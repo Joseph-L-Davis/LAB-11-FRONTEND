@@ -20,7 +20,7 @@ export default class SauceAdd extends Component {
     render() {
       return (
         <div className="SauceAdd">
-          <h2>Add or Update a Sauce</h2>
+          <h1>Add or Update a Sauce</h1>
           <SauceForm onSubmit={this.handleAdd}/>
         </div>
       );

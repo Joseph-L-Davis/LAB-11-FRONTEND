@@ -3,6 +3,7 @@ import SauceItem from './SauceItem';
 import './SauceList.css';
 
 class List extends Component {
+  
   render() {
     const sauces = this.props.sauces;
 

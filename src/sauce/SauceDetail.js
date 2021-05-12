@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './SauceDetail.css';
-import { getSauce } from '../utils/sauces-api.js';
+import { getSauce, deleteSauce } from '../utils/sauces-api.js';
 
 export default class SauceDetail extends Component {
   state = {
@@ -17,6 +18,21 @@ export default class SauceDetail extends Component {
     }
   }
 
+  handleDelete = async () => {
+    const { sauce } = this.state;
+    const { history } = this.props;
+
+    const confirm = `Delete ${sauce.name}?`;
+
+    if (!window.confirm(confirm)) { return; }
+
+    try { 
+      await deleteSauce(sauce.id);
+      history.push(`/sauces`);
+    }
+    catch (err) { console.log(err.message);}
+  }
+
   render() {
     const { sauce } = this.state;
 
@@ -28,10 +44,12 @@ export default class SauceDetail extends Component {
         <img src={sauce.img} alt='Hot Sauce'/>
         <p className='scoville'>Scoville: {sauce.scoville}</p>
         <p className='location'>{sauce.location}</p>
+
+        <Link to={`/sauces/${sauce.id}/edit`}>Edit Sauce</Link>
+
+        <button className='delete' onClick={this.handleDelete}>Delete Sauce</button>
                 
       </div>
     );
   }
 }
-
-// banana

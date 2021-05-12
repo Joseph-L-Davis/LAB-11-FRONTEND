@@ -11,6 +11,7 @@ li a {
     max-width: 200px;
     text-decoration: none;
     color: black;
+    border-radius: 5%;
 }
 
 li h2 {

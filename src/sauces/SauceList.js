@@ -5,7 +5,7 @@ import './SauceList.css';
 class List extends Component {
   render() {
     const sauces = this.props.sauces;
-    console.log(sauces);
+
     return (
       <ul className='List'>
         {sauces.map(sauce => (
